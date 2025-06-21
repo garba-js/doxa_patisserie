@@ -118,13 +118,9 @@ main img {
     box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     border: 1px solid #ddd;
-    transition: transform 0.3s ease;
     align-items: center;
 }
 
-.card:hover {
-    transform: scale(1.03);
-}
 
 .card img {
     width: 100%;
@@ -146,7 +142,7 @@ main img {
   display: inline-block;
   margin-top: 5px;
   padding: 5px 10px;
-  background-color: #703c23;       /* WhatsApp green */
+  background-color: var(--headings-color);       /* WhatsApp green */
   color: white;
   font-weight: 700;
   text-decoration: none;
@@ -158,9 +154,10 @@ main img {
 
 .whatsapp-btn:hover,
 .whatsapp-btn:focus {
-  background-color: #1ebe57;       /* Darker green on hover */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  outline: none;
+    color: white;
+    background-color: rgb(187, 125, 9);       /* Darker green on hover */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    outline: none;
 }
 
 .whatsapp-btn:active {

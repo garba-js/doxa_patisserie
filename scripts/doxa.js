@@ -18,77 +18,77 @@ const products = [
         price: 500,
         description: "Soft, buttery, irresistible.",
         img: "images/cookie.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Cookies"
+        whatsappCartUrl: "https://wa.me/p/28857518713895370/2348133139142"
     },
     {
         name: "Signature Cake",
         price: 10500,
         description: "1 Bento 2 Cupcake",
         img: "images/signature_cake.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Signature%20Cake"
+        whatsappCartUrl: "https://wa.me/p/9394822660595027/2348133139142"
     },
     {
         name: "Fondant Cake",
         price: 48999,
         description: "3 layer size 8",
         img: "images/product1.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Fondant%20Cake"
+        whatsappCartUrl: "https://wa.me/p/7743973925724195/2348133139142"
     },
     {
         name: "Plain Cake",
         price: 9900,
         description: "1 layer size 8",
         img: "images/product2.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Plain%20Cake"
+        whatsappCartUrl: "https://wa.me/p/8352817841448031/2348133139142"
     },
     {
         name: "Butter Cream Cake",
         price: 12900,
         description: "1 layer size 6",
         img: "images/product3.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Butter%20Cream%20Cake"
+        whatsappCartUrl: "https://wa.me/p/9467063726705021/2348133139142"
     },
     {
         name: "Whipped Cream Cake",
         price: 20900,
         description: "2 layer size 6",
         img: "images/product4.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Whipped%20Cream%20Cake"
+        whatsappCartUrl: "https://wa.me/p/7743973925724195/2348133139142"
     },
     {
         name: "Whipped Cream Large",
         price: 35500,
         description: "2 layer size 8",
         img: "images/product5.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Whipped%20Cream%20Large"
+        whatsappCartUrl: "https://wa.me/p/9544905088864099/2348133139142"
     },
     {
         name: "Butter Cream Mini",
         price: 10000,
         description: "2 layer size 4",
         img: "images/product6.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Butter%20Cream%20Mini"
+        whatsappCartUrl: "https://wa.me/p/7743973925724195/2348133139142"
     },
     {
         name: "Bento Cake Premium",
         price: 6700,
         description: "1 layer size 4",
         img: "images/product7.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Bento%20Cake%20Premium"
+        whatsappCartUrl: "https://wa.me/p/7743973925724195/2348133139142"
     },
     {
         name: "Bento Cake Plain",
         price: 5000,
         description: "Plain size 4",
         img: "images/product8.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Bento%20Cake%20Plain"
+        whatsappCartUrl: "https://wa.me/p/7743973925724195/2348133139142"
     },
     {
         name: "Cupcakes Deal",
         price: 2500,
         description: "Per Box",
         img: "images/cupcake.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Cupcakes%20Deal"
+        whatsappCartUrl: "https://wa.me/p/7743973925724195/2348133139142"
     }
 ];
 
@@ -123,7 +123,7 @@ function displayProducts(productArray) {
                 <p>Price: ₦${product.price.toLocaleString()}</p>
                 <p>${product.description}</p>
                 <a href="${whatsappLink}" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
-                    Order on WhatsApp
+                    View Details
                 </a>
             </div>
         `;
