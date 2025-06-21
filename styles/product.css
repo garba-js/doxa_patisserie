@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #703b23; 
+    --primary-color2: green;
+    --headings-color: #703c23;        /* Dark brown */
+    --background-green: #bccf9e;      /* For background and product highlight */
+    --background-brown: #c5a56f;      /* For header background */
+    --accent2-color: #3e614b;
+    --body-font: "Quicksand", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1000px;
+    font-family: var(--body-font);
+    background-color: #fff;
+    color: #333;
+}
+
+/* -------------------- HEADER -------------------- */
+
+header {
+    background-color: var(--background-brown);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 12px #333333a8;
+    color: #fff;
+}
+
+#menu {
+    display: block;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #000;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+.harmbuger {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.harmbuger li {
+    display: none;
+}
+
+.harmbuger a {
+    display: block;
+    padding: 0.75rem;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(43, 35, 35);
+    font-weight: 700;
+    font-size: clamp(1rem, 2vmin, 1.2rem);
+    transition: 0.3s;
+}
+
+.harmbuger a:hover,
+.harmbuger a:active {
+    color: var(--headings-color);
+    background-color: #fff;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+/* -------------------- MAIN -------------------- */
+
+main img {
+    width: 100%;
+    height: auto;
+}
+
+.hheading {
+    grid-column: 1 / span 3;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.highlight p {
+    font-size: 0.85rem;
+}
+
+.highlight h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* -------------------- PRODUCT CARD -------------------- */
+
+.card {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+    align-items: center;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.description h3 {
+    color: var(--headings-color);
+    margin-bottom: 0.3rem;
+}
+
+.description p {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+/* -------------------- whatsappbtn -------------------- */
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #703c23;       /* WhatsApp green */
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn:hover,
+.whatsapp-btn:focus {
+  background-color: #1ebe57;       /* Darker green on hover */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  outline: none;
+}
+
+.whatsapp-btn:active {
+  background-color: #1aa851;       /* Even darker when clicked */
+  box-shadow: none;
+}
+
+
+/* -------------------- FOOTER -------------------- */
+
+footer {
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+    color: var(--headings-color);
+    border-top: 1px solid #ccc;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.social img {
+    width: 2rem;
+    padding: 0.25rem;
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+@media screen and (min-width: 600px) {
+    .highlight {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .highlight {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 2rem;
+    }
+
+    .harmbuger {
+        display: flex;
+    }
+
+    .harmbuger li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    #menu {
+        display: none;
+    }
+}
