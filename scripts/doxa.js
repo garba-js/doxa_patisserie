@@ -11,14 +11,14 @@ hambutton.addEventListener('click', () => {
     hambutton.classList.toggle('show');
 });
 
-// Dynamic Product Rendering on product.html with unique WhatsApp Business cart links
+// Products array with WhatsApp cart/order links
 const products = [
     {
         name: "Cookies",
         price: 500,
         description: "Soft, buttery, irresistible.",
         img: "images/cookie.webp",
-        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Cookies" // Replace with real catalog/cart URL
+        whatsappCartUrl: "https://wa.me/2348012345678?text=I%20want%20to%20order%20Cookies"
     },
     {
         name: "Signature Cake",
@@ -92,12 +92,17 @@ const products = [
     }
 ];
 
+// Find the container where products will be displayed
 const productContainer = document.querySelector('.highlight');
 
-if (productContainer && window.location.href.includes("index.html")) {
+// Detect if on homepage (index.html or root)
+const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '';
+
+if (productContainer && isHomePage) {
     displayProducts(products);
 }
 
+// Function to render products dynamically
 function displayProducts(productArray) {
     productContainer.innerHTML = `
         <div class="hheading">
@@ -118,7 +123,7 @@ function displayProducts(productArray) {
                 <p>Price: ₦${product.price.toLocaleString()}</p>
                 <p>${product.description}</p>
                 <a href="${whatsappLink}" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
-                    View Details
+                    Order on WhatsApp
                 </a>
             </div>
         `;
