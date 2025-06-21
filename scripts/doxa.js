@@ -94,7 +94,7 @@ const products = [
 
 const productContainer = document.querySelector('.highlight');
 
-if (productContainer && window.location.href.includes("product.html")) {
+if (productContainer && window.location.href.includes("index.html")) {
     displayProducts(products);
 }
 
